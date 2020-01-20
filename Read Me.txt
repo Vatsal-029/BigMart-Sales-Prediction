@@ -39,20 +39,3 @@ Outlet_Type : Whether the outlet is just a grocery store or some sort of superma
 
 Item_Outlet_Sales : Sales of the product in the particulat store. This is the outcome 
 			variable to be predicted.
-
-My approch: after reading and analyzing data it is found that:
-
-Item_Fat_Content has catagories ['Low Fat', 'reg', 'Regular', 'LF', 'low fat'] 
-			Corrected the misspeled catagories and converted them to
-			'LF', 'low fat' => 'Low Fat' 'reg' => 'Regular'
-
-
-There are some missing values in Outlet_size and Item_Weight for Item_Weight 
-missing values are filled by mean of the column and Outlet_size missing values are filled 
-by mode of the column i.e 'Medium'
-
-created new column called num_years num_years indicate that how old the outlet is.
-
-then applied different models for prediction LinearRegression , SVM, RandomForestRegressor, XGBoost
-
-Evaluated the model by checking RMSE value, XGBoost gave the best result that is RMSE = 1098.29
